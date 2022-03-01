@@ -13,5 +13,5 @@ HELP_MSG3 = "the list of available commands:\n" \
             "/ping - ping if bot is running (should always be and ping back, " \
             "but just in case...)\n"\
             "/help - well.. this"
-HELP_MSG4 = "list of word parts that alarm goes off to: {}"
+HELP_MSG4 = "the list of word parts that alarm goes off to: "
 
