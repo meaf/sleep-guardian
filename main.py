@@ -75,8 +75,10 @@ def ping_back(_, msg):
 
 
 @app.on_message(filters.command("test_call", prefixes="/"))
-def ping_back(_, msg):
-    app.send_message(msg.from_user.username, "I'm here =)")
+def test_call(_, msg):
+    url = telebot_uri.format("@" + msg.from_user.username, "Alert!")
+    with urlopen(url) as f:
+        print(json.load(f))
 
 
 def join_channel(username, channel):
