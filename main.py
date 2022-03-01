@@ -48,6 +48,7 @@ def show_help(_, msg):
     app.send_message(msg.from_user.username, HELP_MSG3)
     app.send_message(msg.from_user.username, HELP_MSG4)
     app.send_message(msg.from_user.username, ', '.join(alarm_msg_markers))
+    app.send_message(msg.from_user.username, HELP_MSG5)
 
 
 @app.on_message(filters.channel & filters.text)

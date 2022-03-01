@@ -11,7 +11,10 @@ HELP_MSG3 = "the list of available commands:\n" \
             "/test_call - make a test call, I recommend you doing this after " \
             "registration and add bot to contacts\n" \
             "/ping - ping if bot is running (should always be and ping back, " \
-            "but just in case...)\n"\
+            "but just in case...)\n" \
             "/help - well.. this"
 HELP_MSG4 = "the list of word parts that alarm goes off to: "
 
+HELP_MSG5 = 'Please go to "Settings" -> "Privacy and Security" and make sure ' \
+            'that the "Calls" from everybody or your contacts ' \
+            '(but add @CallMeBot_API8)'
