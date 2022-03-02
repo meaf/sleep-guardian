@@ -31,7 +31,7 @@ log in to you account with first launch of the guardian
 ###  Install as a service (linux for now)
 to not risk it exiting in the middle of the night, we need to install it as a service
 
-you also might want to change path to main.py in `./service/sleep-guardian.service` 
+you also might want to change path to main.py in `./service/sleep-guardian.service` and change father's name in constants.py and in store/subscriptions =) 
 ```bash
 mv ./service/sleep-guardian.service /usr/lib/systemd/system/
 systemctl stop sleep-guardian.service
