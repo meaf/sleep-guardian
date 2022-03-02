@@ -1,0 +1,12 @@
+[Unit]
+Description=sleep_guardian
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.8 /root/sleep-guardian/main.py >> /root/guardian.logs
+Restart=always
+RestartSec=5
+TimeoutStartSec=infinity
+
+[Install]
+WantedBy=multi-user.target
