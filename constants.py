@@ -19,4 +19,7 @@ HELP_MSG5 = '!!!IMPORTANT!!! ' \
             'sure that the "Calls" from everybody or your contacts (but add ' \
             '@CallMeBot_API8 to contacts)\n' \
             '2. register on https://api2.callmebot.com/txt/login.php\n' \
-            '3. after that make a /test_call to make sure everything is OK'
+            '3. after that make a /test_call to make sure everything is OK\n' \
+            '4. if call does not happen(you see it as Declined from bot) try ' \
+            'disable call notifications on TG Desktop:\n' \
+            'Settings > Notification > Disable: accept calls on this device.'
