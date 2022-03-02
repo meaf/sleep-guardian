@@ -9,6 +9,7 @@ from pyrogram.errors import UsernameInvalid
 from constants import *
 
 app = Client("guardian")
+STORE_PATH = "/tmp/store/"
 
 
 @app.on_message(filters.command("join", prefixes="/"))
@@ -91,6 +92,7 @@ def join_channel(username, channel):
         track_channels[channel].append(username)
     save_dictionary()
 
+
 def leave_channel(username, channel):
     channel = channel.replace("@", "")
     if channel not in track_channels:
@@ -117,7 +119,7 @@ def alert_user(username, msg):
 
 
 def save_dictionary():
-    with open("./store/subscriptions", "w") as data:
+    with open(STORE_PATH + "subscriptions", "w") as data:
         data.write(str(track_channels))
 
 
@@ -132,8 +134,8 @@ def on_startup():
 
 
 telebot_uri = "http://api.callmebot.com/start.php?user={}&text={}&rpt=2&cc=yes"
-alarm_msg_markers = load_data("./store/markers")
-track_channels = load_data("./store/subscriptions")
+alarm_msg_markers = load_data(STORE_PATH + "markers")
+track_channels = load_data(STORE_PATH + "subscriptions")
 
 app.start()
 on_startup()
