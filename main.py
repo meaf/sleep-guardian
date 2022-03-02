@@ -80,7 +80,7 @@ def ping_back(_, msg):
 def test_call(_, msg):
     url = telebot_uri.format("@" + msg.from_user.username, "Alert!")
     with urlopen(url) as f:
-        print(json.load(f))
+        app.send_message(msg.from_user.username, f.reason)
 
 
 def join_channel(username, channel):
@@ -111,7 +111,8 @@ def leave_channel(username, channel):
 
 
 def alert_user(username, msg):
-    app.send_message(username, msg.sender_chat.title + ": " + msg.text)
+    app.send_message(username,
+                     "Alert! " + msg.sender_chat.title + ": " + msg.text)
     url = telebot_uri.format("@" + username, "Alert!")
     with urlopen(url) as f:
         print(json.load(f))
